@@ -15,6 +15,7 @@ const formatTime = (milliseconds) => {
 
 const start = () => {
   if (isRunning === false) {
+    timeElement.dataset.mode = ""
     console.log("O time foi iniciado com sucesso!")
     startTIme = setInterval(() => {
       initTime += 1
@@ -27,6 +28,7 @@ const start = () => {
 
 const pause = () => {
   if (isRunning === true) {
+    timeElement.dataset.mode = "red"
     console.log("O time foi pausado com sucesso!")
     clearInterval(startTIme)
     isRunning = false
@@ -35,6 +37,7 @@ const pause = () => {
 
 const reset = () => {
   if (initTime > 0) {
+    timeElement.dataset.mode = ""
     console.log("O time foi resetado com sucesso!")
     timeElement.innerText = formatTime(0)
     clearInterval(startTIme)
