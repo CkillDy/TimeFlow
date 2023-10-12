@@ -1,0 +1,96 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.relogio {
+  text-align: center;
+  box-shadow: 4px 3px 4px 3px #4b47508a;
+  max-width: 400px;
+  width: calc(100% - 60px);
+  min-width: 200px;
+  border-radius: 9px 5px;
+  padding: 12px;
+  padding-bottom: 20px;
+  background-color: #0a060f;
+}
+
+.titulo {
+  text-align: start;
+  color: #7237c0;
+  font-weight: 400;
+  font-size: 0.9rem;
+  user-select: none;
+}
+
+.titulo::before {
+  margin-right: 6px;
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  border-radius: 50%;
+  background-color: #742ad4;
+}
+
+.relogio>time {
+  display: inline-block;
+  font-size: 2.5rem;
+  color: #b98ef1;
+  font-family: monospace, sans-serif, 'Segoe UI';
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  user-select: none;
+}
+
+.buttons button {
+  background-color: #742ad4;
+  color: #d2bfe9;
+  cursor: pointer;
+  padding: 7px 12px;
+  font-weight: 600;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+}
+
+.buttons button:hover {
+  background-color: #5919ad;
+  color: #bb94ec;
+}
+
+.colorActive {
+  background-color: red;
+}
+
+@media screen and (max-width: 350px) {
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons button {
+    padding: 9px 50px;
+  }
+}
